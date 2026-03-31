@@ -37,7 +37,7 @@ const Banner = () => {
             </button>
             
             {/* Outlined Button - Matches Image Exactly */}
-            <button className="flex items-center gap-2 bg-white border border-[#7C3AED] text-[#7C3AED] px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all">
+            <button className="flex items-center gap-2 bg-white border border-[#7C3AED] text-[#7C3AED] px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-200 transition-all">
               <img 
                 src="/assets/Play.png" 
                 alt="Play" 
