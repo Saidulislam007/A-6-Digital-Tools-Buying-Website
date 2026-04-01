@@ -8,6 +8,8 @@ import Pricing from "./Components/Pricing"
 import ProductionCard from "./Components/ProductionCard"
 import Status from "./Components/Status"
 import StepsCards from "./Components/StepsCards"
+import { ToastContainer } from "react-toastify";
+
 
 
 const getData = async () => {
@@ -36,6 +38,7 @@ const removeFromCart = (id) => {
 
 const clearCart = () => {
   setCartItems([]);
+   
 };
 
   return (
@@ -90,6 +93,8 @@ const clearCart = () => {
       <Join />
 
       <Footer />
+
+       <ToastContainer position="top-right" autoClose={2000} />
 
 
 

@@ -1,4 +1,4 @@
-
+import { toast } from "react-toastify";
 const Cards = ({ cartItems, removeFromCart,clearCart }) => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
@@ -41,7 +41,11 @@ const Cards = ({ cartItems, removeFromCart,clearCart }) => {
 
                             {/* Remove Button - Matches Pink Color in Image */}
                             <button
-                            onClick={() => removeFromCart(cartItem.id)}
+                            onClick={() => {
+  removeFromCart(cartItem.id);
+  toast.success("Item removed successfully!");
+}
+                            }
                                className="text-[#FF4D8D] font-bold text-sm hover:text-[#e6457e] transition-colors px-4 py-2"
                             >
                                 Remove
@@ -59,7 +63,10 @@ const Cards = ({ cartItems, removeFromCart,clearCart }) => {
                         </span>
                     </div>
 
-                    <button onClick={clearCart} className="w-full bg-[#8b3eff] hover:bg-[#7828f6] text-white py-5 rounded-full text-lg font-bold transition-all shadow-lg shadow-purple-100">
+                    <button onClick={ () => {
+    clearCart();
+    toast.success("Proceeding to checkout successfully!");
+  }} className="w-full bg-[#8b3eff] hover:bg-[#7828f6] text-white py-5 rounded-full text-lg font-bold transition-all shadow-lg shadow-purple-100">
                         Proceed To Checkout
                     </button>
 

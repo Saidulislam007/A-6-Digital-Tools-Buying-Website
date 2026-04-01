@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from "react-toastify";
 
 const ProductsCardsUi = ({ data , getBadgeStyle , cartItems, setCartItems}) => {
     const[isBuying, setIsBuying] = useState(false)
@@ -6,6 +7,7 @@ const ProductsCardsUi = ({ data , getBadgeStyle , cartItems, setCartItems}) => {
     const handleBuyNow = () => {
         setIsBuying(true);
         setCartItems([...cartItems, data]);  
+        toast.success(`${data.name} added to cart!`);
 
     }
 
