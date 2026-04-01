@@ -32,7 +32,11 @@ const removeFromCart = (id) => {
   const updatedCart = cartItems.filter(item => item.id !== id);
   setCartItems(updatedCart);
 };
-  console.log(cartItems);
+  
+
+const clearCart = () => {
+  setCartItems([]);
+};
 
   return (
     <>
@@ -72,7 +76,7 @@ const removeFromCart = (id) => {
 
             </div>
             {isProductsActive === 'products' && <ProductionCard dataPromise={dataPromise} cartItems={cartItems} setCartItems={setCartItems} />}
-      {isProductsActive === 'cart' && <Cards cartItems={cartItems} removeFromCart={removeFromCart} />}
+      {isProductsActive === 'cart' && <Cards clearCart={clearCart} cartItems={cartItems} removeFromCart={removeFromCart} />}
 
         </section>
 

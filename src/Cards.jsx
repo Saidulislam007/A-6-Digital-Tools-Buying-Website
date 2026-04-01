@@ -1,5 +1,5 @@
 
-const Cards = ({ cartItems, removeFromCart }) => {
+const Cards = ({ cartItems, removeFromCart,clearCart }) => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
    
@@ -59,7 +59,7 @@ const Cards = ({ cartItems, removeFromCart }) => {
                         </span>
                     </div>
 
-                    <button className="w-full bg-[#8b3eff] hover:bg-[#7828f6] text-white py-5 rounded-full text-lg font-bold transition-all shadow-lg shadow-purple-100">
+                    <button onClick={clearCart} className="w-full bg-[#8b3eff] hover:bg-[#7828f6] text-white py-5 rounded-full text-lg font-bold transition-all shadow-lg shadow-purple-100">
                         Proceed To Checkout
                     </button>
 
