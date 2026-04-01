@@ -9,6 +9,7 @@ import ProductionCard from "./Components/ProductionCard"
 import Status from "./Components/Status"
 import StepsCards from "./Components/StepsCards"
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
