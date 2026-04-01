@@ -37,7 +37,7 @@ const StepsCards = () => {
                     {steps.map((step) => (
                         <div
                             key={step.id}
-                            className="relative bg-white p-10 rounded-3xl border border-gray-100 text-center transition hover:shadow-md flex flex-col justify-between min-h-[320px]"
+                            className="relative bg-white p-10 rounded-3xl border border-gray-100 text-center transition hover:shadow-lg flex flex-col justify-between min-h-[320px]"
                         >
 
                             {/* Step Number Badge */}
