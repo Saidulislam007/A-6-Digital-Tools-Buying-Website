@@ -1,4 +1,5 @@
 import Banner from "./Components/Banner"
+import Footer from "./Components/Footer"
 import Join from "./Components/Join"
 import Navbar from "./Components/Navbar"
 import Pricing from "./Components/Pricing"
@@ -28,7 +29,7 @@ function App() {
 
     <Join />
 
-    
+    <Footer />
 
     
       
